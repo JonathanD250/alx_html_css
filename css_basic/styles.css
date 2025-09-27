@@ -38,3 +38,16 @@ header, footer {
     background-color: #ddd;
     text-align: center;
 }
+
+/* Smartphone layout */
+.works_on_smartphone main {
+    flex-direction: column; /* stack article and aside vertically */
+}
+
+.works_on_smartphone article,
+.works_on_smartphone aside {
+    flex: none; /* remove the flex growth/shrink */
+    width: 100%; /* make them full width */
+    border-right: none; /* remove the right border */
+    border-bottom: 2px solid #ccc; /* optional separator */
+}
