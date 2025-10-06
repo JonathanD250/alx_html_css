@@ -181,3 +181,100 @@ header {
     font-weight: normal; /* Make the second line (weather presenter) normal weight */
     font-size: 16px;
 }
+
+/* TUTORIALS SECTION */
+.tutorials {
+  padding: 80px 100px;
+  text-align: center; /* Center the heading */
+}
+
+.tutorials h2 {
+  font-size: 32px;
+  font-weight: 300;
+  color: #000;
+  margin-bottom: 60px;
+}
+
+/* Highlight the word "popular" in the heading */
+.tutorials h2 span {
+  color: #9C57F0; /* Purple color */
+  font-weight: 600;
+}
+
+/* Update the HTML for the heading to use the span: <h2>Most <span>popular</span> tutorials</h2> */
+
+/* TUTORIAL LIST LAYOUT */
+.tutorial-list {
+  display: flex;
+  justify-content: space-between; /* Distribute space between items */
+  gap: 20px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* INDIVIDUAL TUTORIAL ITEM */
+.tutorial-item {
+  width: calc(25% - 15px); /* Calculate width for 4 items with gap */
+  text-align: left; /* Reset text alignment inside the card */
+  /* Remove width for a fluid approach on mobile/tablets */
+}
+
+.tutorial-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px; /* Optional: Slight rounding for images */
+}
+
+.tutorial-item h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 15px 0 10px;
+  color: #000;
+}
+
+.tutorial-item p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #6c757d; /* Lighter grey for description */
+  margin-bottom: 20px;
+}
+
+/* AUTHOR INFO (Styling for Profile Image and Name) */
+.tutorial-item .author-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tutorial-item .author-info img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.tutorial-item .author-info p {
+  color: #9C57F0; /* Purple text for the author's name */
+  font-weight: 600;
+  margin: 0; /* Remove default paragraph margin */
+}
+
+/* RATING/TIME SECTION */
+.tutorial-item .rating-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pushes rating to left and time to right */
+}
+
+.tutorial-item .stars {
+  /* You will likely need to use an icon font (like Font Awesome) or images for stars */
+  /* For now, this placeholder ensures spacing. */
+  color: #9C57F0; /* Purple stars */
+  font-size: 16px;
+}
+
+.tutorial-item .time {
+  color: #9C57F0; /* Purple text for the time */
+  font-size: 14px;
+  font-weight: 600;
+}
