@@ -5,155 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>First Project</title>
+  <title>SmileSchool</title>
 </head>
 <body>
-  <!-- Header Section -->
+
   <header>
-    <a href="#">
-      <img src="images/logo.png" alt="Website Logo">
-    </a>
-    <nav>
-      <a href="#">COURSES</a>
-      <a href="#">PRICING</a>
-      <a href="#">LOGIN</a>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo.png" alt="SmileSchool Logo"> 
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
     </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Get schooled</h1>
+        <p class="subtext">SMILES   GRIN   LAUGH</p>
+        <button class="btn">REGISTER FOR FREE</button>
+        <p class="learn">Learn from the pros</p>
+        <div class="profiles">
+          <div class="profile">
+            <img src="images/Profile 1.png" alt="Phillip Massey">
+            <p>Phillip Massey<br><span>Smile of the year 2018-2019</span></p>
+          </div>
+          <div class="profile">
+            <img src="images/Profile 2.png" alt="Nannie Lawrence">
+            <p>Nannie Lawrence<br><span>Best little smile 2017</span></p>
+          </div>
+          <div class="profile">
+            <img src="images/Profile 3.png" alt="Bruce Walters">
+            <p>Bruce Walters<br><span>Best friend smile 2019</span></p>
+          </div>
+          <div class="profile">
+            <img src="images/Profile 4.png" alt="Henry Hughes">
+            <p>Henry Hughes<br><span>24h smiles winner 2016-2019</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
   </header>
 
-  <!-- Main Section -->
-  <main>
-    <!-- Banner Section -->
-    <section>
-      <div>
-        <h1>Get schooled</h1>
-        <p>SMILES</p>
-        <p>GRIN</p>
-        <p>LAUGH</p>
-        <button>REGISTER FOR FREE</button>
+  <section class="testimonials">
+    <div class="testimonial">
+      <img src="images/Profile 5.png" alt="Person">
+      <blockquote>
+        <p>“These tutorials are concise and go straight to the point. I can’t find a better place to learn smiling. And it’s free!”</p>
+        <cite>Person Name<br>weather presenter</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="tutorials">
+    <h2>Most popular tutorials</h2>
+    <div class="tutorial-list">
+      <div class="tutorial-item">
+        <img src="images/preview 1.png" alt="Diagonal Smile">
+        <h3>Diagonal Smile</h3>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
       </div>
-
-      <div>
-        <h2>Learn from the pros</h2>
-        <div>
-          <div>
-            <img src="images/pro1.png" alt="Phillip Massey">
-            <h3>Phillip Massey</h3>
-            <p>"Smile of the year" 2018-2019</p>
-          </div>
-
-          <div>
-            <img src="images/pro2.png" alt="Nannie Lawrence">
-            <h3>Nannie Lawrence</h3>
-            <p>Best "little smile" 2017</p>
-          </div>
-
-          <div>
-            <img src="images/pro3.png" alt="Bruce Walters">
-            <h3>Bruce Walters</h3>
-            <p>Best "Friend Smile" 2019</p>
-          </div>
-
-          <div>
-            <img src="images/pro4.png" alt="Henry Hughes">
-            <h3>Henry Hughes</h3>
-            <p>"24th smiles" winner 2016-2019</p>
-          </div>
-        </div>
+      <div class="tutorial-item">
+        <img src="images/preview 2.png" alt="Sad Smile">
+        <h3>Sad Smile</h3>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
       </div>
-    </section>
-
-    <!-- Quote Section -->
-    <section>
-      <div>
-        <img src="images/author.png" alt="Author Image">
-        <div>
-          <blockquote>"This is the inspirational quote text that goes here."</blockquote>
-          <p><strong>Author Name</strong></p>
-          <p>Additional context or description under the quote.</p>
-        </div>
+      <div class="tutorial-item">
+        <img src="images/preview 3.png" alt="Natural Smile">
+        <h3>Natural Smile</h3>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
       </div>
-    </section>
-
-    <!-- Videos Section -->
-    <section>
-      <h2>Videos</h2>
-      <div>
-        <div>
-          <img src="images/video1.png" alt="Video 1">
-          <h3>Video Title 1</h3>
-          <p>Short description of video 1.</p>
-          <div>
-            <img src="images/author1.png" alt="Author 1">
-            <h4>Author 1</h4>
-          </div>
-          <div>
-            <div>
-              <img src="images/star.png" alt="Star">
-              <img src="images/star.png" alt="Star">
-              <img src="images/star.png" alt="Star">
-              <img src="images/star.png" alt="Star">
-              <img src="images/star-empty.png" alt="Empty Star">
-            </div>
-            <p>4.0 Rating</p>
-          </div>
-        </div>
-        <!-- Repeat 3 more video blocks -->
+      <div class="tutorial-item">
+        <img src="images/preview 4.png" alt="Happy Smile">
+        <h3>Happy Smile</h3>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
       </div>
-    </section>
+    </div>
+  </div>
+  </section>
 
-    <!-- Membership Section -->
-    <section>
-      <h2>Membership</h2>
+  <section class="membership">
+    <h2>Free membership</h2>
+    <div class="features">
       <div>
-        <div>
-          <img src="images/membership1.png" alt="Basic Plan">
-          <h3>Basic Plan</h3>
-          <p>Short description of the basic membership plan.</p>
-          <button>Join Now</button>
-        </div>
-        <!-- Repeat 3 more membership blocks -->
+        <img src="images/logo.png" alt="SmileSchool Logo">
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
       </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section>
-      <h2>FAQ</h2>
       <div>
-        <div>
-          <div>
-            <h3>Question 1</h3>
-            <p>Answer to question 1 goes here.</p>
-          </div>
-          <div>
-            <h3>Question 2</h3>
-            <p>Answer to question 2 goes here.</p>
-          </div>
-        </div>
-        <div>
-          <div>
-            <h3>Question 3</h3>
-            <p>Answer to question 3 goes here.</p>
-          </div>
-          <div>
-            <h3>Question 4</h3>
-            <p>Answer to question 4 goes here.</p>
-          </div>
-        </div>
+        <img src="images/logo.png" alt="SmileSchool Logo">
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
       </div>
-    </section>
-  </main>
+      <div>
+        <img src="images/logo.png" alt="SmileSchool Logo">
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+      </div>
+      <div>
+        <img src="images/logo.png" alt="SmileSchool Logo">
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+      </div>
+    </div>
+    <button class="btn">REGISTER FOR FREE</button>
+  </section>
 
-  <!-- Footer -->
+  <section class="faq">
+    <h2>F.A.Q</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>How does it work?</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias doloribus natus excepturi.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How does it work?</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias doloribus natus excepturi.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How does it work?</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias doloribus natus excepturi.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How does it work?</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias doloribus natus excepturi.</p>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <div>
-      <img src="images/footer-logo.png" alt="Footer Logo">
-      <div>
-        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
-        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+    <div class="footer-content">
+      <img src="images/logo.png" alt="SmileSchool Logo">
+      <div class="socials">
+        <a href="#"><img src="images/Facebook_White.png" alt="Facebook"></a>
+        <a href="#"><img src="images/Twitter_White.png" alt="Twitter"></a>
+        <a href="#"><img src="images/Instagram_White.png" alt="Instagram"></a>
       </div>
-      <p>© 2025 Your Company. All rights reserved.</p>
+      <p>© SmileSchool 2025</p>
     </div>
   </footer>
+
 </body>
 </html>
