@@ -133,3 +133,51 @@ header {
   font-style: italic;
   font-size: 12px;
 }
+
+/* TESTIMONIALS SECTION STYLING */
+.testimonials {
+  background-color: #9C57F0; /* The purple background color */
+  padding: 80px 0; /* Add top/bottom padding */
+}
+
+.testimonial {
+  display: flex; /* Use Flexbox to align image and text horizontally */
+  align-items: center; /* Vertically center the items */
+  max-width: 800px; /* Constrain the width of the content */
+  margin: 0 auto; /* Center the testimonial block */
+  padding: 0 20px; /* Add some horizontal padding for smaller screens */
+  color: white; /* Ensure all text is white */
+}
+
+.testimonial img {
+  width: 160px; /* Set a specific size for the image */
+  height: 160px;
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  margin-right: 50px; /* Space between the image and the quote */
+}
+
+.testimonial blockquote {
+  /* Set blockquote to take up the remaining space */
+  flex-grow: 1;
+}
+
+.testimonial blockquote p {
+  font-size: 22px; /* Set a larger font size for the quote */
+  line-height: 1.5;
+  margin-bottom: 20px;
+  /* Add quotes around the text if they are not in the HTML */
+}
+
+.testimonial blockquote cite {
+  display: block; /* Make the name and title appear on new lines */
+  font-style: normal; /* Reset italic style inherited from cite */
+  font-weight: bold; /* Make the Person Name bolder */
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.testimonial blockquote cite br + span {
+    font-weight: normal; /* Make the second line (weather presenter) normal weight */
+    font-size: 16px;
+}
