@@ -278,3 +278,146 @@ header {
   font-size: 14px;
   font-weight: 600;
 }
+
+/* CONTAINER FOR PLAY BUTTON */
+.video-preview {
+  position: relative; /* CRITICAL: Sets the positioning context for the play button */
+  display: block;
+}
+
+/* PLAY BUTTON STYLING (The white circle and triangle) */
+.video-preview::after {
+  content: ""; /* Use a blank content string */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the element perfectly */
+  
+  /* Create the white circle */
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white circle */
+  border-radius: 50%;
+  
+  /* Add the triangular play symbol using a CSS border trick */
+  border-style: solid;
+  border-width: 12px 0 12px 20px;
+  border-color: transparent transparent transparent #9C57F0; /* Purple triangle */
+  
+  /* Adjust triangle position within the circle */
+  padding-left: 2px;
+}
+
+/* Hover Effect (Optional: makes the button look interactive) */
+.video-preview:hover::after {
+  background-color: rgba(255, 255, 255, 1); /* Make the circle fully opaque on hover */
+  cursor: pointer;
+}
+
+/* MEMBERSHIP SECTION */
+.membership {
+  background-color: #28283E; /* Dark navy background */
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff; /* Default white text color for this section */
+}
+
+.membership h2 {
+  font-size: 32px;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+/* Feature Grid Layout */
+.membership .features {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px; /* Constrain width and center */
+  margin: 0 auto 60px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.membership .features > div {
+  width: 25%; /* Each feature takes up 1/4 of the container width */
+  min-width: 200px; /* Prevent shrinking too much on small screens */
+  text-align: center;
+}
+
+.membership .features img {
+  /* This is likely a placeholder for a custom icon/smiley */
+  /* If you use an SVG or Font Awesome icon, you'd style it differently */
+  width: 44px; /* Adjust size of the logo/icon */
+  height: 44px;
+  /* Apply purple tint to the logo/icon if it's the logo.png, 
+     but based on the image, you'll need to use an actual purple smiley icon 
+     or an SVG for the best result. */
+  filter: sepia(100%) saturate(1000%) hue-rotate(240deg) brightness(1.2); 
+  /* The filter above attempts to color a white/grey image purple, 
+     but a proper purple icon is recommended. */
+  margin-bottom: 15px;
+}
+
+.membership .features p:first-of-type {
+  /* Styling for 'Lorem ipsum' line */
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.membership .features p:last-of-type {
+  /* Styling for the description text */
+  font-size: 14px;
+  color: #ccc; /* Lighter white for body text */
+}
+
+/* Button Styling (if not already defined for .btn) */
+.membership .btn {
+  /* Ensure the button overrides any global button styles for color/shadow if needed */
+  background: #9C57F0; /* Purple background for button */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.membership .btn:hover {
+  background: #844adb;
+}
+
+/* F.A.Q SECTION */
+.faq {
+  background-color: #fff; /* White background */
+  padding: 80px 100px; /* Add vertical padding and horizontal margins */
+  text-align: center; /* Center the heading */
+  color: #000; /* Ensure text is black/dark */
+}
+
+.faq h2 {
+  font-size: 60px; /* Large font size for the heading */
+  font-weight: 300;
+  margin-bottom: 60px;
+}
+
+/* F.A.Q GRID LAYOUT */
+.faq-grid {
+  display: grid;
+  /* CRITICAL: Creates a two-column layout with equal width */
+  grid-template-columns: 1fr 1fr; 
+  gap: 60px 80px; /* Vertical (row) and horizontal (column) gap */
+  max-width: 1200px; /* Constrain the overall width and center it */
+  margin: 0 auto;
+  text-align: left; /* Reset text alignment inside the grid items */
+}
+
+/* INDIVIDUAL F.A.Q ITEM */
+.faq-item h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.faq-item p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6c757d; /* Lighter grey for the answer text */
+}
