@@ -421,3 +421,46 @@ header {
   line-height: 1.6;
   color: #6c757d; /* Lighter grey for the answer text */
 }
+
+/* FOOTER SECTION */
+footer {
+  background-color: #28283E; /* Dark navy background matching the membership section */
+  padding: 40px 100px 15px; /* Add vertical padding */
+  color: #fff; /* White text for contrast */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* Puts logo on the left, socials on the right */
+  align-items: center;
+  margin-bottom: 40px; /* Space between the top content and the copyright line */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Logo Styling */
+.footer-content img[alt="Logo"] {
+  width: 160px; /* Adjust size as needed for the combined logo/text image */
+  height: auto;
+}
+
+/* Social Icons */
+.socials {
+  display: flex;
+  gap: 15px; /* Space between the social icons */
+}
+
+.socials img {
+  width: 30px; /* Size of the social icons */
+  height: 30px;
+  /* Optional: Add border-radius if your icons aren't already circles */
+  border-radius: 50%; 
+}
+
+/* Copyright Text */
+footer p {
+  text-align: center; /* Center the copyright text below the main content */
+  font-size: 12px;
+  color: #9c9c9c; /* Lighter grey for subtle appearance */
+}
