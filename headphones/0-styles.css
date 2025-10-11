@@ -1,0 +1,240 @@
+/*
+ * --------------------------------
+ * 1. CSS Reset and Box Sizing
+ * --------------------------------
+ */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+ * --------------------------------
+ * 2. CSS Variables and Typography
+ * --------------------------------
+ */
+:root {
+    --color-primary: #FF6565;
+    --color-white: #FFFFFF;
+    --font-source-sans: 'Source Sans Pro', sans-serif;
+    --font-spin-cycle: 'Spin Cycle OT', sans-serif; /* Placeholder font-family */
+    --max-content-width: 1000px;
+}
+
+body {
+    font-family: var(--font-source-sans);
+    color: var(--color-white);
+    background-color: #000000;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-white);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+.container {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 0 20px; /* Add padding for small screens */
+}
+
+/*
+ * --------------------------------
+ * 3. Header and Navigation Styles
+ * --------------------------------
+ */
+.header {
+    width: 100%;
+    position: absolute; /* Allows hero content to sit under */
+    padding: 20px 0;
+    z-index: 10;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 30px; /* Standard height */
+    width: auto;
+}
+
+/* Navigation List */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Mobile Menu Implementation (Hidden by default) */
+.menu-btn,
+.menu-icon {
+    display: none; /* Hidden on desktop */
+}
+
+
+/*
+ * --------------------------------
+ * 4. Hero Section Styles
+ * --------------------------------
+ */
+.hero {
+    /* Height calculation to fit the design aesthetic */
+    padding-top: 250px;
+    padding-bottom: 200px;
+    text-align: center;
+    background-image: url('images/headphones_hero_1.jpg'); /* Placeholder background */
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero p:nth-of-type(1) { /* Hero subtitle */
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.hero-text {
+    max-width: 700px;
+    margin: 40px auto 0;
+}
+
+.hero-text p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 22px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.button:hover,
+.button:active {
+    opacity: 0.9;
+}
+
+
+/*
+ * --------------------------------
+ * 5. Media Query (Mobile - <= 480px)
+ * --------------------------------
+ */
+@media (max-width: 480px) {
+    /* Header/Navigation Mobile Layout */
+    .header .container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .nav-list {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #000;
+        padding-top: 10px;
+    }
+    
+    .nav-list li {
+        margin: 10px 0;
+    }
+    
+    /* Mobile Menu Icon Styling (Hamburger) */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        padding: 5px;
+        position: relative;
+        z-index: 20;
+    }
+
+    .nav-icon {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: var(--color-white);
+        position: relative;
+    }
+    
+    .nav-icon::before,
+    .nav-icon::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: var(--color-white);
+        position: absolute;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-icon::before { top: -6px; }
+    .nav-icon::after { top: 6px; }
+
+    /* Checkbox hack to show menu */
+    .menu-btn:checked ~ .nav-list {
+        display: flex;
+    }
+    
+    .menu-btn {
+        position: absolute;
+        opacity: 0;
+        z-index: 25;
+        width: 30px;
+        height: 30px;
+        top: 20px;
+        right: 20px;
+    }
+    
+    /* Hero Content Mobile Adjustments */
+    .hero {
+        padding-top: 150px;
+        padding-bottom: 80px;
+    }
+    
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .hero p:nth-of-type(1) {
+        font-size: 14px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+}
