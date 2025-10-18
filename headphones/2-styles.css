@@ -1,0 +1,406 @@
+/*
+ * --------------------------------
+ * 1. CSS Reset and Box Sizing
+ * --------------------------------
+ */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+ * --------------------------------
+ * 2. CSS Variables and Base Styles
+ * --------------------------------
+ */
+:root {
+    --color-primary: #FF6565;
+    --color-white: #FFFFFF;
+    --color-text: #071629; /* Dark blue for text */
+    --font-source-sans: 'Source Sans Pro', sans-serif;
+    --max-content-width: 1000px;
+}
+
+body {
+    font-family: var(--font-source-sans);
+    color: var(--color-text);
+    background-color: #ffffff;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.container {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Generic Section Styling */
+.section {
+    padding: 80px 0;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 60px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.section-header p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/*
+ * --------------------------------
+ * 3. Header and Navigation Styles
+ * --------------------------------
+ */
+.header-hero-wrapper {
+    background-image: url('images/headphones_hero_1.jpg'); /* Placeholder background */
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.logo img {
+    height: 30px;
+    width: auto;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+.menu-btn, .menu-icon {
+    display: none;
+}
+
+
+/*
+ * --------------------------------
+ * 4. Hero Section Styles
+ * --------------------------------
+ */
+.hero {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero p:first-of-type {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.hero-text {
+    max-width: 640px;
+    margin: 40px auto 0;
+}
+
+.hero-text p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 22px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover, .button:active {
+    opacity: 0.9;
+}
+
+
+/*
+ * --------------------------------
+ * 5. "What we do..." Section
+ * --------------------------------
+ */
+.what-we-do-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    text-align: center;
+}
+
+.what-we-do-item {
+    flex: 1 1 200px;
+    max-width: 210px;
+}
+
+.what-we-do-item [class^="holberton_school-icon-"] {
+    font-size: 60px;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.what-we-do-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.what-we-do-item p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/**
+ * To use this file:
+ * 1. Create a folder named "fonts" in your project's root directory.
+ * 2. Place the icon font files (e.g., holberton_school-icon.woff) inside the "fonts" folder.
+ * 3. Make sure this CSS file is linked in your HTML's <head> section.
+ */
+@font-face {
+  font-family: 'holberton_school-icon';
+  src:  url('holberton_school-icon/fonts/holberton_school-icon.eot');
+  src:  url('holberton_school-icon/fonts/holberton_school-icon.eot') format('embedded-opentype'),
+    url('holberton_school-icon/fonts/holberton_school-icon.ttf') format('truetype'),
+    url('holberton_school-icon/fonts/holberton_school-icon.woff') format('woff'),
+    url('holberton_school-icon/fonts/holberton_school-icon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'holberton_school-icon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.holberton_school-icon-ic_sound:before {
+  content: "\e90e";
+}
+.holberton_school-icon-ic_video:before {
+  content: "\e910";
+}
+.holberton_school-icon-ic_music:before {
+  content: "\e90d";
+}
+.holberton_school-icon-ic_hearing:before {
+  content: "\e909";
+}
+
+/*
+ * --------------------------------
+ * 6. "Our Results" Section
+ * --------------------------------
+ */
+.our-results {
+    background-image: url('images/headphones_hero_2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+}
+
+.our-results .section-header p {
+    font-weight: 400;
+}
+
+.our-results-list {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap;
+    gap: 40px; /* Space between items */
+    margin-top: 60px;
+}
+
+.our-results-item {
+    width: 190px;
+    height: 190px;
+    background-color: var(--color-primary);
+    /* Creates the pentagon shape */
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    flex-shrink: 0; /* Prevent items from shrinking */
+    flex-grow: 0; /* Prevent items from growing */
+}
+
+.result-percentage {
+    font-size: 46px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.result-description {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/*
+ * --------------------------------
+ * 7. Media Queries (Responsive)
+ * --------------------------------
+ */
+@media (max-width: 768px) {
+    .nav-list {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header/Navigation Mobile Layout */
+    .header-container {
+        flex-wrap: wrap;
+        position: relative;
+        padding-top: 30px;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 50px 0 20px;
+    }
+    
+    .nav-list li { margin: 10px 0; }
+    
+    .nav-link { color: var(--color-text); }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        z-index: 20;
+    }
+
+    .nav-icon {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: var(--color-white);
+        position: relative;
+        transition: background-color 0.3s ease;
+    }
+    
+    .nav-icon::before, .nav-icon::after {
+        content: '';
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: var(--color-white);
+        position: absolute;
+        transition: transform 0.3s ease, top 0.3s ease;
+    }
+
+    .nav-icon::before { top: -8px; }
+    .nav-icon::after { top: 8px; }
+
+    .menu-btn {
+        opacity: 0;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 25px;
+        right: 20px;
+        z-index: 25;
+        cursor: pointer;
+    }
+    
+    .menu-btn:checked ~ .nav-list {
+        display: flex;
+        background: var(--color-white);
+        position: absolute;
+        top: -30px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .menu-btn:checked ~ .menu-icon .nav-icon { background-color: transparent; }
+    .menu-btn:checked ~ .menu-icon .nav-icon::before { transform: rotate(45deg); top: 0; background-color: var(--color-text); }
+    .menu-btn:checked ~ .menu-icon .nav-icon::after { transform: rotate(-45deg); top: 0; background-color: var(--color-text); }
+    
+    /* Hero Content Mobile Adjustments */
+    .hero { padding-top: 100px; padding-bottom: 50px; }
+    .hero h1 { font-size: 28px; }
+    
+    /* "What we do..." section Mobile */
+    .what-we-do-item { flex: 1 1 100%; }
+
+    /* "Our Results" section Mobile */
+    .our-results-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+}
+
