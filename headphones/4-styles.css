@@ -205,6 +205,24 @@ a {
     line-height: 1.6;
 }
 
+.what-we-do-item {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.what-we-do-item:hover {
+  transform: scale(1.1);
+  animation: bounce 0.8s ease;
+}
+
+.what-we-do-item [class^="holberton_school-icon-"] {
+  transition: transform 0.5s ease;
+}
+
+.what-we-do-item:hover [class^="holberton_school-icon-"] {
+  transform: rotate(15deg);
+  color: #ff6565;
+}
+
 /**
  * To use this file:
  * 1. Create a folder named "fonts" in your project's root directory.
@@ -299,6 +317,17 @@ a {
     font-size: 14px;
     margin-top: 5px;
 }
+
+.our-results-item {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.our-results-item:hover {
+  transform: scale(1.1) rotate(5deg);
+  animation: pulse 1.2s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
 
 /*
  * --------------------------------
@@ -531,4 +560,20 @@ a {
 
 .holberton_school-icon-ic_instagram:before {
   content: "\e90a"; /* This is the instagram icon character */
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
